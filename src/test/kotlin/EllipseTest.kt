@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import kotlin.test.assertFailsWith
 
 internal class EllipseTest {
-
     /***
      * tests the getHorizontalRadius function, and checks if the radius is the expected value of 5.0
      */
@@ -32,6 +32,14 @@ internal class EllipseTest {
         val myTestEllipse: Ellipse = Ellipse(Point(0.0, 0.0), 3.0, 5.0)
 
         assertEquals(Math.PI * 3.0 * 5.0, myTestEllipse.calculateArea())
+    }
+
+    /***
+     * tests the calculateArea function, and checks if area is equal to zero: then throws illegalArgumentException
+     */
+    @Test
+    fun checkIfAreaIsZero() {
+        assertFailsWith<IllegalArgumentException> { Ellipse(Point(0.0, 0.0), 0.0, 5.0) }
     }
 
     /***

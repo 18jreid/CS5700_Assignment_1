@@ -1,7 +1,4 @@
-class Point(x: Double, y: Double) {
-    private var xCoordinate: Double = x;
-    private var yCoordinate: Double = y;
-
+class Point(private var xCoordinate: Double, private var yCoordinate: Double) {
     /***
      * returns the x coordinate for the point
      */

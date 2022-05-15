@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Assertions.*
 import kotlin.test.assertFailsWith
 
 internal class SquareTest {
-
     /***
      * tests the getWidth function, checks if width is expected value of 5.0
      */

@@ -8,5 +8,5 @@ abstract class Shape {
     /***
      * moves the shape in the desired deltaX and deltaY direction
      */
-    open fun move(deltaX: Double, deltaY: Double) {println("test")}
+    open fun move(deltaX: Double, deltaY: Double) {}
 }
