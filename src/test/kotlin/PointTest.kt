@@ -3,20 +3,17 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 
 internal class PointTest {
-    private var myTestPoint: Point = Point(0.0, 0.0)
-
     /***
      * tests the movePoint function, by moving the point in the positive direction
      */
     @Test
     fun movePointPositiveDirection() {
+        val myTestPoint: Point = Point(0.0, 0.0)
+
         // Move point 1 unit in x direction and 1 unit in y direction
         myTestPoint.movePoint(1.0, 1.0)
         assertEquals(1.0, myTestPoint.getYCoordinate())
         assertEquals(1.0, myTestPoint.getYCoordinate())
-
-        // reset point
-        myTestPoint = Point(0.0, 0.0)
     }
 
     /***
@@ -24,13 +21,12 @@ internal class PointTest {
      */
     @Test
     fun movePointNegativeDirection() {
+        val myTestPoint: Point = Point(0.0, 0.0)
+
         // Move point 1 unit in x direction and 1 unit in y direction
         myTestPoint.movePoint(-1.0, -1.0)
         assertEquals(-1.0, myTestPoint.getYCoordinate())
         assertEquals(-1.0, myTestPoint.getYCoordinate())
-
-        // reset point
-        myTestPoint = Point(0.0, 0.0)
     }
 
     /***
@@ -38,12 +34,11 @@ internal class PointTest {
      */
     @Test
     fun clonePoint() {
+        val myTestPoint: Point = Point(0.0, 0.0)
+
         // Move point -1 units in x direction and -1 units in y direction
         val myClonedPoint = myTestPoint.clonePoint()
         assertEquals(myTestPoint.getXCoordinate(), myClonedPoint.getXCoordinate())
         assertEquals(myTestPoint.getYCoordinate(), myClonedPoint.getYCoordinate())
-
-        // reset point
-        myTestPoint = Point(0.0, 0.0)
     }
 }
