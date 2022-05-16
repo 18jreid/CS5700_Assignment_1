@@ -1,6 +1,6 @@
 import kotlin.math.abs
 
-open class Rectangle(private var topRight: Point, private var bottomLeft: Point): Shape() {
+open class Rectangle(private var pointOne: Point, private var pointTwo: Point): Shape() {
     // Check if rectangles width and height are greater than 0, if not: throw IllegalArgumentException
     init {
         if (getWidth() <= 0) {
@@ -13,29 +13,29 @@ open class Rectangle(private var topRight: Point, private var bottomLeft: Point)
     /***
      * returns top right corner point of rectangle
      */
-    fun getTopRightPoint(): Point {
-        return this.topRight
+    fun getPointOne(): Point {
+        return this.pointOne
     }
 
     /***
      * returns bottom left corner point of rectangle
      */
-    fun getBottomLeftPoint(): Point {
-        return this.bottomLeft
+    fun getPointTwo(): Point {
+        return this.pointTwo
     }
 
     /***
      * calculates the width of the rectangle based off of the change in x between the two points given
      */
     fun getWidth(): Double {
-        return abs(this.topRight.getXCoordinate() - this.bottomLeft.getXCoordinate());
+        return abs(this.pointOne.getXCoordinate() - this.pointTwo.getXCoordinate());
     }
 
     /***
      * calculates the height of the rectangle based off of the change in y between the two points given
      */
     fun getHeight(): Double {
-        return abs(this.topRight.getYCoordinate() - this.bottomLeft.getYCoordinate());
+        return abs(this.pointOne.getYCoordinate() - this.pointTwo.getYCoordinate());
     }
 
     /***
@@ -50,7 +50,7 @@ open class Rectangle(private var topRight: Point, private var bottomLeft: Point)
      * Moves rectangle based off of desired deltaX and deltaY
      */
     override fun move(deltaX: Double, deltaY: Double) {
-        this.topRight.movePoint(deltaX, deltaY)
-        this.bottomLeft.movePoint(deltaX, deltaY)
+        this.pointOne.movePoint(deltaX, deltaY)
+        this.pointTwo.movePoint(deltaX, deltaY)
     }
 }

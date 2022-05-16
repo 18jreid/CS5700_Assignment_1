@@ -63,10 +63,10 @@ internal class SquareTest {
         val myTestSquare: Square = Square(Point(0.0, 0.0), Point(1.0, 1.0))
         myTestSquare.move(10.0, 5.0)
 
-        assertEquals(10.0, myTestSquare.getTopRightPoint().getXCoordinate())
-        assertEquals(5.0, myTestSquare.getTopRightPoint().getYCoordinate())
+        assertEquals(10.0, myTestSquare.getPointOne().getXCoordinate())
+        assertEquals(5.0, myTestSquare.getPointOne().getYCoordinate())
 
-        assertEquals(11.0, myTestSquare.getBottomLeftPoint().getXCoordinate())
-        assertEquals(6.0, myTestSquare.getBottomLeftPoint().getYCoordinate())
+        assertEquals(11.0, myTestSquare.getPointTwo().getXCoordinate())
+        assertEquals(6.0, myTestSquare.getPointTwo().getYCoordinate())
     }
 }

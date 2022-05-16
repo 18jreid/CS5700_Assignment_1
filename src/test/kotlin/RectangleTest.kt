@@ -58,10 +58,10 @@ internal class RectangleTest {
         val myTestRectangle: Rectangle = Rectangle(Point(0.0, 0.0), Point(1.0, 1.0))
         myTestRectangle.move(10.0, 5.0)
 
-        assertEquals(10.0, myTestRectangle.getTopRightPoint().getXCoordinate())
-        assertEquals(5.0, myTestRectangle.getTopRightPoint().getYCoordinate())
+        assertEquals(10.0, myTestRectangle.getPointOne().getXCoordinate())
+        assertEquals(5.0, myTestRectangle.getPointOne().getYCoordinate())
 
-        assertEquals(11.0, myTestRectangle.getBottomLeftPoint().getXCoordinate())
-        assertEquals(6.0, myTestRectangle.getBottomLeftPoint().getYCoordinate())
+        assertEquals(11.0, myTestRectangle.getPointTwo().getXCoordinate())
+        assertEquals(6.0, myTestRectangle.getPointTwo().getYCoordinate())
     }
 }

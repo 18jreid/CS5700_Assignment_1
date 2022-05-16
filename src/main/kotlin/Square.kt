@@ -1,4 +1,4 @@
-class Square(topRight: Point, bottomLeft: Point) : Rectangle(topRight, bottomLeft) {
+class Square(pointOne: Point, pointTwo: Point) : Rectangle(pointOne, pointTwo) {
     // Check if width and height are equal
     init {
         if (getWidth() != getHeight()) {
